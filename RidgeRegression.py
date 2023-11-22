@@ -27,7 +27,8 @@ class RidgeRegression:
     def GetY(self, data):
         return data[:, 1]
 
-    def CreateHigherDimensionData(self, x, degree=[15]):
+    def CreateHigherDimensionData(self, x, degree=None):
+        degree = [15] if degree is None else degree
 
         x = x.reshape(x.shape[0], 1)
 
